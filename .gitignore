@@ -1,5 +1,6 @@
 #設定檔
 config.txt
+log.txt
 
 #Mac無用
 .DS_Store

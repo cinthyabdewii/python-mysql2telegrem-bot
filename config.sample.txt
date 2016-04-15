@@ -1,4 +1,9 @@
 [apitoken]
 token = xxxxxxxx
-[sql]
-dblogin = MySQLdb.connect("localhost","testuser","test123","TESTDB" )
+
+[db]
+host = localhost
+user = root
+password = testpass
+dbname = telegram-bot
+
