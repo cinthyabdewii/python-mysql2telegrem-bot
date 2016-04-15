@@ -30,13 +30,19 @@ def handle(msg):
     if command == '/talk':
         bot.sendMessage(chat_id, '主人先看看指令吧？')
 
-
+# 取得設定檔資訊
 parser = SafeConfigParser()
 parser.read('config.txt')
-parser.get('apitoken', 'token')
-db = dblogin
+telepot_token = parser.get('apitoken', 'token')
+db_host = parser.get('db', 'host')
+db_uid = parser.get('db', 'user')
+db_pass = parser.get('db', 'password')
+db_name = parser.get('db', 'dbname')
 
-bot = telepot.Bot(token)
+# 連接MySQL資料庫
+#db = MySQLdb.connect(db_host, db_uid, db_pass, db_name)
+
+bot = telepot.Bot(telepot_token)
 bot.notifyOnMessage(handle)
 print '監聽中 ...'
 
