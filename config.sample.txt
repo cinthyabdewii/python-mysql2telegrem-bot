@@ -5,5 +5,5 @@ token = xxxxxxxx
 host = localhost
 user = root
 password = testpass
-dbname = telegram-bot
+dbname = telepot
 
