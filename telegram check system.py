@@ -21,7 +21,7 @@ def handle(msg):
     h = ( '嗨' + str(username.encode('utf-8')) + '主人')
     why =('為什麼要用Telegram?!')
     content = str(username.encode('utf-8'))+'說：'+str(command.encode('utf-8'))
-    f = open('Lchat.txt', 'a')
+    f = open('log.txt', 'a')
     f.write(content+'\n')
 
     print content
@@ -29,6 +29,12 @@ def handle(msg):
 
     if command == '/talk':
         bot.sendMessage(chat_id, '主人先看看指令吧？')
+
+
+parser = SafeConfigParser()
+parser.read('config.txt')
+parser.get('apitoken', 'token')
+db = dblogin
 
 bot = telepot.Bot(token)
 bot.notifyOnMessage(handle)

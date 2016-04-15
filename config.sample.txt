@@ -1,4 +1,4 @@
-[token]
+[apitoken]
 token = xxxxxxxx
 [sql]
-db = MySQLdb.connect("localhost","testuser","test123","TESTDB" )
+dblogin = MySQLdb.connect("localhost","testuser","test123","TESTDB" )
